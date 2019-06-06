@@ -2,14 +2,14 @@
 	<div>
 		<el-container>
 			<el-aside style="width:264px;">
-				<div class="logo-box">logo</div>
+				<div class="logo-box"><img :src="imgUrl0"/></div>
 				<div class="vue-aside-nav">
-					<vue-header></vue-header>
+					<vue-aside></vue-aside>
 				</div>
 			</el-aside>
 			<el-container>
 				<el-header style="height:78px;">
-					header
+					<vue-header></vue-header>
 				</el-header>
 				<el-main>
 					<router-view></router-view>
@@ -20,13 +20,16 @@
 </template>
 
 <script>
-    import vueHeader from './pages/vueHeader.vue';
+    import vueAside from './pages/vueAside.vue';
+    import vueHeader from './pages/vueHeader.vue'
 	export default {
 		components: {
+			vueAside,
 			vueHeader
 		},
 		data() {
 			return {
+				"imgUrl0":require("./images/01_dashboard_01.png")
 			};
 		}
 	}

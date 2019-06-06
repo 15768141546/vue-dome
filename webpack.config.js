@@ -22,10 +22,11 @@ module.exports = {
 		}, {
 			test: /\.css$/, //css文件加载器
 			loaders: ["style-loader", "css-loader"]
-		}, {
-			test: /\.(eot|svg|ttf|woff|woff2)$/,
-			loader: 'file-loader'
-		}]
+		},
+		{
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+        loader: 'file-loader'
+      }]
 	},
 	plugins: [
 		// 添加VueLoaderPlugin，以响应vue-loader
